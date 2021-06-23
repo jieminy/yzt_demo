@@ -43,7 +43,8 @@ public class KMPV2 {
         while (i < c2.length) {
             if (c2[i] == c2[cn]) {
                 next[i++] = ++cn;
-            } else if (cn > 0) {
+            }// 结束条件 cn必须归-1
+            else if (cn > 0) {
                 cn = next[cn];
             } else {
                 i++;
